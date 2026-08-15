@@ -1326,7 +1326,10 @@ body.home-page > * {
   z-index: 1;
 }
 body.home-page > .navbar-custom {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1030;
 }
 body::before {
@@ -1421,6 +1424,7 @@ body.home-page .intro-header {
   background: #161823;
   z-index: 1;
   overflow: hidden;
+  margin-top: 0;
 }
 body.home-page .intro-header::after {
   background: none;
@@ -1449,7 +1453,7 @@ body.home-page .intro-header-video {
 }
 body.home-page .intro-header > .container {
   position: absolute;
-  top: 56px;
+  top: 0;
   right: 0;
   left: 0;
   z-index: 2;
@@ -1457,11 +1461,14 @@ body.home-page .intro-header > .container {
 body.home-page .intro-header .site-heading {
   position: relative;
   z-index: 2;
-  padding: 0;
+  padding: 88px 0 148px;
 }
 @media only screen and (min-width: 768px) {
   body.home-page .intro-header > .container {
-    top: 56px;
+    top: 0;
+  }
+  body.home-page .intro-header .site-heading {
+    padding: 96px 0 160px;
   }
 }
 .intro-header:hover .intro-header-video {
