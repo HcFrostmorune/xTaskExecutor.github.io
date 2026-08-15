@@ -816,7 +816,7 @@ footer {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: .72;
+  opacity: 1;
   z-index: -2;
   filter: saturate(.82) contrast(1.05);
   transition: opacity .6s ease, transform 1.2s ease;
@@ -831,22 +831,19 @@ footer {
   position: absolute;
   inset: auto 0 0;
   height: 46%;
-  background: linear-gradient(transparent, rgba(232, 236, 239, .9));
+  background: none;
   z-index: -1;
 }
 
 .intro-header .header-mask {
-  background:
-    linear-gradient(135deg, rgba(232, 236, 239, .72), rgba(214, 224, 226, .58)),
-    linear-gradient(to bottom, rgba(232, 236, 239, .28) 20%, rgba(232, 236, 239, .9) 100%);
-  z-index: -1;
+  display: none;
 }
 
 .intro-header .site-heading,
 .intro-header .page-heading,
 .intro-header .post-heading {
-  color: #26303a;
-  text-shadow: 0 8px 30px fade(white, 42%);
+  color: @text-light;
+  text-shadow: 0 8px 30px fade(black, 60%);
 }
 
 .intro-header .site-heading h1,
@@ -856,7 +853,7 @@ footer {
 }
 
 .intro-header .subheading {
-  color: fade(#26303a, 76%);
+  color: fade(@text-light, 86%);
 }
 
 .postlist-container,
