@@ -741,7 +741,8 @@ footer {
 }
 
 .navbar-custom {
-  padding: 10px 18px;
+  min-height: 56px;
+  padding: 0 18px;
   background: fade(@brand-dark, 72%);
   border-bottom: 1px solid fade(@brand-primary, 10%);
   backdrop-filter: blur(18px);
@@ -755,6 +756,9 @@ footer {
 }
 
 .navbar-custom .navbar-brand {
+  height: 56px;
+  padding: 14px 16px;
+  line-height: 28px;
   color: @text-light;
   letter-spacing: .02em;
   transition: color .25s ease, transform .25s ease;
@@ -778,6 +782,7 @@ footer {
 }
 
 .navbar-custom .nav li a {
+  padding: 18px 16px;
   color: @text-muted;
   border-radius: 999px;
   transition: color .25s ease, background-color .25s ease, transform .25s ease;
@@ -856,7 +861,7 @@ body.home-page .intro-header-video {
 
 body.home-page .intro-header > .container {
   position: absolute;
-  top: 68px;
+  top: 56px;
   right: 0;
   left: 0;
   z-index: 2;
@@ -870,7 +875,7 @@ body.home-page .intro-header .site-heading {
 
 @media only screen and (min-width: 768px) {
   body.home-page .intro-header > .container {
-    top: 76px;
+    top: 56px;
   }
 }
 
