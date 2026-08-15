@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   // Hux mpdify to 16px (Mobile First), and increase to 20px while 768+ width
   color: @gray-dark;
+  background-color: @brand-dark;
   //-webkit-user-select:text; //对于 Blog 还是先不开启这句。
   overflow-x: hidden;
 
@@ -690,6 +691,11 @@ samp {
   }
 }
 
+.container,
+footer {
+  color: @text-light;
+}
+
 // Hux add home-page post-content-preview
 .post-content-preview {
   font-size: 13px;
@@ -909,7 +915,7 @@ img::-moz-selection {
     &:hover,
     &:active,
     &.focus {
-      background-color: #0085a1 !important;
+      background-color: @brand-primary !important;
     }
     &.focus {
       box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px,
@@ -917,7 +923,7 @@ img::-moz-selection {
     }
     &.tag-button--all {
       font-weight: 700;
-      color: #0085a1 !important;
+      color: @brand-primary !important;
       &:hover,
       &:active,
       &.focus {
@@ -947,7 +953,7 @@ img::-moz-selection {
   }
 }
 .listing-seperator {
-  color: #0085a1;
+  color: @brand-primary;
   font-size: 21px !important;
   &::before {
     margin-right: 5px;
