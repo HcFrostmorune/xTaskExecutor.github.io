@@ -853,7 +853,7 @@ body.home-page .intro-header::after {
   object-fit: cover;
   object-position: center;
   opacity: 1;
-  z-index: -2;
+  z-index: 0;
   filter: saturate(.82) contrast(1.05);
   transition: opacity .6s ease, transform 1.2s ease;
 }
@@ -913,8 +913,10 @@ body.home-page .intro-header .site-heading {
 .intro-header .site-heading,
 .intro-header .page-heading,
 .intro-header .post-heading {
-  color: @text-light;
-  text-shadow: 0 8px 30px fade(black, 60%);
+  color: #e8eaf0;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
 }
 
 .intro-header .site-heading h1,
