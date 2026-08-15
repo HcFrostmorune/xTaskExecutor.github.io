@@ -778,8 +778,14 @@ footer {
 }
 
 .navbar-custom.is-fixed {
+  top: 0;
   background: fade(@brand-dark, 94%);
   box-shadow: 0 14px 40px fade(black, 24%);
+  transform: translate3d(0, -100%, 0);
+}
+
+.navbar-custom.is-fixed.is-visible {
+  transform: translate3d(0, 0, 0);
 }
 
 .navbar-custom .navbar-toggle {
