@@ -1,0 +1,21 @@
+---
+layout:     post
+title:      "我的第一条博客"
+date:       2026-08-15 20:48
+author:     "xTaskExecutor"
+tags: []
+---
+
+> Hi
+
+
+<div>
+    <blockquote>
+        LINK COMPLETE<br>
+        感谢Hux的博客开源模板
+    </blockquote>
+    <br>第一次建博客 感觉还不错
+    <br>
+    <br><b>————致这个混沌的世界</b>。
+    <br>
+</div>
