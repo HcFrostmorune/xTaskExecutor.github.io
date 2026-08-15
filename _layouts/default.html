@@ -6,12 +6,6 @@
 <!-- hack iOS CSS :active style -->
 <body class="{% if page.home-page %}home-page{% endif %}" ontouchstart="">
 
-    {% if page.home-page %}
-    <video class="site-background-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-        <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
-    </video>
-    {% endif %}
-
     {% include nav.html %}
     {% include search.html %}
 

@@ -712,30 +712,9 @@ body.home-page {
   background: transparent;
 }
 
-.site-background-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 1;
-  pointer-events: none;
-  z-index: 0;
-}
-
-body.home-page > *:not(.site-background-video) {
+body.home-page > * {
   position: relative;
   z-index: 1;
-}
-
-body.home-page::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(22, 24, 35, .12), rgba(22, 24, 35, .34));
-  z-index: 0;
 }
 
 body::before {
@@ -838,10 +817,11 @@ footer {
 
 body.home-page .intro-header {
   background: transparent;
+  z-index: 1;
 }
 
 body.home-page .intro-header::after {
-  background: linear-gradient(to bottom, transparent 35%, rgba(22, 24, 35, .36));
+  background: none;
 }
 
 .intro-header-video {
@@ -855,6 +835,24 @@ body.home-page .intro-header::after {
   z-index: -2;
   filter: saturate(.82) contrast(1.05);
   transition: opacity .6s ease, transform 1.2s ease;
+}
+
+body.home-page .intro-header-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 420px;
+  object-fit: contain;
+  object-position: center top;
+  transform: scale(.84);
+  transform-origin: center top;
+  z-index: 0;
+}
+
+body.home-page .intro-header > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .intro-header:hover .intro-header-video {
@@ -1087,9 +1085,7 @@ footer .copyright a {
     display: none;
   }
 
-  .site-background-video {
-    display: none;
-  }
+  body.home-page .intro-header-video { display: none; }
 }
 
 // Keep the modern surface above legacy component defaults.
