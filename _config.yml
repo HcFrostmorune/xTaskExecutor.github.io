@@ -75,7 +75,7 @@ ga_domain: amxi.net
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "逐光者 xTaskExecutor@chaosworld.cn"
-sidebar-avatar: https://github.com/HcFrostmourne.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://github.com/HcFrostmorune.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
