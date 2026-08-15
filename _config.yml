@@ -74,7 +74,7 @@ ga_domain: amxi.net
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "· 混沌逐光者\n· xTaskExecutor@chaosworld.cn"
+sidebar-about-description: "· 混沌逐光者\n  xTaskExecutor@chaosworld.cn"
 sidebar-avatar: https://github.com/HcFrostmorune.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -91,5 +91,8 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
+    { title: "qing199", href: "http://example.net/" },
+    { title: "lonely", href: "http://example.net/" },
+    { title: "鱼美人", href: "http://example.net/" },
+    { title: "国哥", href: "http://example.net/" },
   ]
