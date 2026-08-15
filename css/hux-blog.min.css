@@ -1319,7 +1319,7 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 body.home-page {
-  background: #161823 url("../assets/cherry-endfield.gif") center / cover fixed no-repeat;
+  background: #161823 url("../assets/home-russia.gif") center / cover fixed no-repeat;
 }
 body.post-page {
   background: #161823 url("../assets/post-rust.gif") center / cover fixed no-repeat;
