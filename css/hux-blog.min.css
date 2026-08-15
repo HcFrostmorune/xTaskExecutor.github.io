@@ -1321,16 +1321,17 @@ body {
 body.home-page {
   background: transparent;
 }
-body.home-page > * {
-  position: relative;
-  z-index: 1;
-}
+/* Keep chrome overlays out of document flow so intro-header starts at y=0 */
 body.home-page > .navbar-custom {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1030;
+}
+body.home-page > .search-page {
+  position: fixed;
+  z-index: 1040;
 }
 body::before {
   content: "";

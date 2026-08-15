@@ -1560,3 +1560,24 @@ img::-moz-selection {
 .no-scroll {
   overflow-y: hidden;
 }
+
+// Homepage: do not force every body child into flow.
+// A blanket `body.home-page > * { position: relative }` overrides
+// `.search-page { position: fixed }` and leaves an invisible full-size
+// gap between the top bar and the intro video.
+body.home-page {
+  background: transparent;
+
+  > .navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+  }
+
+  > .search-page {
+    position: fixed;
+    z-index: 1040;
+  }
+}
