@@ -1,3 +1,9 @@
+{% if include.variant == 'post' %}
+<video class="panel-wallpaper" autoplay muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/assets/post-rust.gif" aria-hidden="true">
+  <source src="{{ site.baseurl }}/assets/post-rust.mp4" type="video/mp4">
+</video>
+{% else %}
 <video class="panel-wallpaper" autoplay muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/assets/cherry-endfield.gif" aria-hidden="true">
   <source src="{{ site.baseurl }}/assets/cherry-endfield.mp4" type="video/mp4">
 </video>
+{% endif %}
