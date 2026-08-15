@@ -1313,15 +1313,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: radial-gradient(circle at 12% 8%, rgba(27, 209, 165, 0.12), transparent 28rem), radial-gradient(circle at 90% 42%, rgba(108, 92, 231, 0.1), transparent 30rem), #161823;
-  color: #e8eaf0;
+  background: radial-gradient(circle at 12% 8%, rgba(27, 209, 165, 0.1), transparent 28rem), radial-gradient(circle at 90% 42%, rgba(108, 92, 231, 0.08), transparent 30rem), rgba(232, 236, 239, 0.92);
+  color: #26303a;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.24;
+  opacity: 0.12;
   background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, black, transparent 70%);
@@ -1398,6 +1400,28 @@ footer {
   min-height: 420px;
   background-color: #161823;
   isolation: isolate;
+}
+.intro-header--plain {
+  min-height: 320px;
+  background: radial-gradient(circle at 18% 20%, rgba(27, 209, 165, 0.16), transparent 22rem), linear-gradient(135deg, rgba(245, 247, 248, 0.96), rgba(216, 224, 228, 0.9));
+}
+.intro-header--plain::after {
+  background: linear-gradient(transparent, rgba(232, 236, 239, 0.92));
+}
+.intro-header--plain .header-mask {
+  display: none;
+}
+.intro-header--plain .site-heading,
+.intro-header--plain .page-heading {
+  color: #26303a;
+  text-shadow: none;
+}
+.intro-header--plain .site-heading h1,
+.intro-header--plain .page-heading h1 {
+  color: #26303a;
+}
+.intro-header--plain .subheading {
+  color: rgba(38, 48, 58, 0.7);
 }
 .intro-header-video {
   position: absolute;
