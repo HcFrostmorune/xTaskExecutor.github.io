@@ -1313,33 +1313,22 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: rgba(232, 236, 239, 0.92);
-  color: #26303a;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #1d2030;
+  color: #e8eaf0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 body.home-page {
-  background: #161823 url("../assets/home-russia.gif") center / cover fixed no-repeat;
+  background: #1d2030;
 }
 body.post-page {
-  background: #161823 url("../assets/post-rust.gif") center / cover fixed no-repeat;
+  background: #1d2030;
 }
 body.home-page,
 body.post-page {
   color: #e8eaf0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-}
-body.home-page > .panel-wallpaper,
-body.post-page > .panel-wallpaper {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  z-index: 0;
 }
 /* Keep chrome overlays out of document flow so intro-header starts at y=0 */
 body.home-page > .navbar-custom {
