@@ -82,3 +82,49 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+// Smooth theme interactions.
+jQuery(function($) {
+    var $nav = $('.navbar-custom');
+    var $toggle = $('.navbar-toggle');
+    var $menu = $('#huxblog_navbar');
+    var $search = $('.search-page');
+    var $searchInput = $('#search-input');
+    var $searchClose = $('.search-icon-close');
+
+    function setMenu(open) {
+        $menu.toggleClass('in', open);
+        $toggle.attr('aria-expanded', open ? 'true' : 'false');
+        $('body').toggleClass('menu-open', open);
+    }
+
+    function setSearch(open) {
+        $search.toggleClass('search-active', open).attr('aria-hidden', open ? 'false' : 'true');
+        $('body').toggleClass('search-open', open);
+        if (open) {
+            window.setTimeout(function() { $searchInput.trigger('focus'); }, 220);
+        }
+    }
+
+    $toggle.on('click', function() { setMenu(!$menu.hasClass('in')); });
+    $('.search-icon a').on('click', function(event) {
+        event.preventDefault();
+        setMenu(false);
+        setSearch(true);
+    });
+    $searchClose.on('click keydown', function(event) {
+        if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setSearch(false);
+        }
+    });
+    $(document).on('keydown', function(event) {
+        if (event.key === 'Escape') {
+            setMenu(false);
+            setSearch(false);
+        }
+    });
+    $(window).on('resize', function() {
+        if ($(window).width() >= 768) setMenu(false);
+    });
+});
