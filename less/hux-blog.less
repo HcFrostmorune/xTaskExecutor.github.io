@@ -850,19 +850,22 @@ body.home-page .intro-header-video {
 }
 
 body.home-page .intro-header > .container {
-  position: relative;
+  position: absolute;
+  top: 84px;
+  right: 0;
+  left: 0;
   z-index: 2;
 }
 
 body.home-page .intro-header .site-heading {
   position: relative;
   z-index: 2;
-  padding: 36px 0 128px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  body.home-page .intro-header .site-heading {
-    padding: 36px 0 148px;
+  body.home-page .intro-header > .container {
+    top: 92px;
   }
 }
 
