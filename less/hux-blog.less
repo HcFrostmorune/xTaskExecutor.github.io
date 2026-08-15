@@ -818,6 +818,7 @@ footer {
 body.home-page .intro-header {
   background: transparent;
   z-index: 1;
+  overflow: hidden;
 }
 
 body.home-page .intro-header::after {
@@ -838,19 +839,22 @@ body.home-page .intro-header::after {
 }
 
 body.home-page .intro-header-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 420px;
-  object-fit: contain;
-  object-position: center top;
-  transform: scale(.84);
-  transform-origin: center top;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
   z-index: 0;
 }
 
 body.home-page .intro-header > .container {
+  position: relative;
+  z-index: 2;
+}
+
+body.home-page .intro-header .site-heading {
   position: relative;
   z-index: 2;
 }
