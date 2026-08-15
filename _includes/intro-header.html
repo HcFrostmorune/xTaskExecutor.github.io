@@ -28,6 +28,9 @@
 {% else %}
 <header class="intro-header" >
 {% endif %}
+    <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
+    </video>
     <div class="header-mask"></div>
     {% if page.header-img-credit %}
     <div class="header-img-credit">
@@ -70,6 +73,9 @@
     }
 </style>
 <header class="intro-header" >
+    <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
+    </video>
     <iframe src="{{page.iframe}}"></iframe>
     <!-- keep for SEO -->
     <div class="container">
@@ -95,6 +101,9 @@
 
 {% if include.type == 'page' %}
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+  <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
+  </video>
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
