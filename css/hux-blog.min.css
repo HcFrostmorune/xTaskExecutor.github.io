@@ -1318,13 +1318,15 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-body.home-page {
+body.home-page,
+body.post-page {
   background: #161823 url("../assets/cherry-endfield.gif") center / cover fixed no-repeat;
   color: #e8eaf0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
-body.home-page > .panel-wallpaper {
+body.home-page > .panel-wallpaper,
+body.post-page > .panel-wallpaper {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -1347,7 +1349,9 @@ body.home-page > .search-page {
   z-index: 1040;
 }
 body.home-page > .container,
-body.home-page > footer {
+body.home-page > footer,
+body.post-page > article,
+body.post-page > footer {
   position: relative;
   z-index: 1;
 }

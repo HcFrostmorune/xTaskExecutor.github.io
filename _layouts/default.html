@@ -4,9 +4,9 @@
 {% include head.html %}
 
 <!-- hack iOS CSS :active style -->
-<body class="{% if page.home-page %}home-page{% endif %}" ontouchstart="">
+<body class="{% if page.home-page %}home-page{% elsif page.layout == 'post' %}post-page{% endif %}" ontouchstart="">
 
-    {% if page.home-page %}{% include panel-wallpaper.html %}{% endif %}
+    {% if page.home-page or page.layout == 'post' %}{% include panel-wallpaper.html %}{% endif %}
 
     {% include nav.html %}
     {% include search.html %}
