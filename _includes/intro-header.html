@@ -100,9 +100,11 @@
 
 {% if include.type == 'page' %}
 <header class="intro-header">
+  {% unless page.home-page %}
   <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
   </video>
+  {% endunless %}
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
