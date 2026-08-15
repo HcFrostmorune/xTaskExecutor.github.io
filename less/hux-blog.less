@@ -1611,4 +1611,52 @@ body.home-page {
       transform: none;
     }
   }
+
+  .postlist-container {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 18px 18px 10px;
+    border: 1px solid fade(@brand-primary, 10%);
+    border-radius: 18px;
+    background: #161823 url("../assets/cherry-endfield.gif") center / cover no-repeat;
+  }
+}
+
+.featured-tags-panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 0 0 18px;
+  padding: 16px 16px 14px;
+  border: 1px solid fade(@brand-primary, 10%);
+  border-radius: 16px;
+  background: #161823 url("../assets/cherry-endfield.gif") center / cover no-repeat;
+}
+
+.panel-wallpaper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.home-page .postlist-container::after,
+.featured-tags-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(22, 24, 35, 0.28), rgba(22, 24, 35, 0.52));
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.home-page .postlist-container > *:not(.panel-wallpaper),
+.featured-tags-panel > *:not(.panel-wallpaper) {
+  position: relative;
+  z-index: 2;
 }
