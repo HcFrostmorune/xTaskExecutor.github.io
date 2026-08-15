@@ -1409,7 +1409,7 @@ footer {
   isolation: isolate;
 }
 body.home-page .intro-header {
-  background: transparent;
+  background: #161823;
   z-index: 1;
   overflow: hidden;
 }
@@ -1445,11 +1445,11 @@ body.home-page .intro-header > .container {
 body.home-page .intro-header .site-heading {
   position: relative;
   z-index: 2;
-  padding: 92px 0 128px;
+  padding: 36px 0 128px;
 }
 @media only screen and (min-width: 768px) {
   body.home-page .intro-header .site-heading {
-    padding: 92px 0 148px;
+    padding: 36px 0 148px;
   }
 }
 .intro-header:hover .intro-header-video {
