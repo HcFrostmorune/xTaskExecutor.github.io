@@ -4,7 +4,6 @@
 {% endcomment %}
 
 {% if include.type == 'post' or include.type == 'page' %}
-{% unless page.hide-header-media %}
 <style type="text/css">
     header.intro-header{
         position: relative;
@@ -21,7 +20,6 @@
     }
     {% endif %}
 </style>
-{% endunless %}
 {% endif %}
 
 {% if include.type == 'post' %}
@@ -102,12 +100,10 @@
 {% endif %}
 
 {% if include.type == 'page' %}
-<header class="intro-header{% if page.hide-header-media %} intro-header--plain{% endif %}"{% unless page.hide-header-media %} style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"{% endunless %}>
-  {% unless page.hide-header-media %}
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
   <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
   </video>
-  {% endunless %}
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
