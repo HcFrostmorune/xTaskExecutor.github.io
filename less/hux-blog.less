@@ -709,12 +709,21 @@ body {
 }
 
 body.home-page {
-  background: transparent;
-}
+  background: #161823 url("../assets/cherry-endfield.gif") center / cover fixed no-repeat;
+  color: @text-light;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 
-body.home-page > * {
-  position: relative;
-  z-index: 1;
+  > .panel-wallpaper {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 body.home-page > .navbar-custom {
@@ -1561,10 +1570,8 @@ img::-moz-selection {
   overflow-y: hidden;
 }
 
-// Homepage: do not force every body child into flow.
-// A blanket `body.home-page > * { position: relative }` overrides
-// `.search-page { position: fixed }` and leaves an invisible full-size
-// gap between the top bar and the intro video.
+// Homepage overlay layers must stay outside document flow.
+// This keeps the search overlay from creating a blank gap before the intro video.
 body.home-page {
   background: transparent;
 
@@ -1579,6 +1586,12 @@ body.home-page {
   > .search-page {
     position: fixed;
     z-index: 1040;
+  }
+
+  > .container,
+  > footer {
+    position: relative;
+    z-index: 1;
   }
 
   .intro-header {
@@ -1611,52 +1624,4 @@ body.home-page {
       transform: none;
     }
   }
-
-  .postlist-container {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    padding: 18px 18px 10px;
-    border: 1px solid fade(@brand-primary, 10%);
-    border-radius: 18px;
-    background: #161823 url("../assets/cherry-endfield.gif") center / cover no-repeat;
-  }
-}
-
-.featured-tags-panel {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  margin: 0 0 18px;
-  padding: 16px 16px 14px;
-  border: 1px solid fade(@brand-primary, 10%);
-  border-radius: 16px;
-  background: #161823 url("../assets/cherry-endfield.gif") center / cover no-repeat;
-}
-
-.panel-wallpaper {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  pointer-events: none;
-}
-
-body.home-page .postlist-container::after,
-.featured-tags-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(22, 24, 35, 0.28), rgba(22, 24, 35, 0.52));
-  z-index: 1;
-  pointer-events: none;
-}
-
-body.home-page .postlist-container > *:not(.panel-wallpaper),
-.featured-tags-panel > *:not(.panel-wallpaper) {
-  position: relative;
-  z-index: 2;
 }

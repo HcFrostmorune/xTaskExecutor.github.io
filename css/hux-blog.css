@@ -1319,7 +1319,20 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 body.home-page {
-  background: transparent;
+  background: #161823 url("../assets/cherry-endfield.gif") center / cover fixed no-repeat;
+  color: #e8eaf0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body.home-page > .panel-wallpaper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 0;
 }
 /* Keep chrome overlays out of document flow so intro-header starts at y=0 */
 body.home-page > .navbar-custom {
@@ -1332,6 +1345,11 @@ body.home-page > .navbar-custom {
 body.home-page > .search-page {
   position: fixed;
   z-index: 1040;
+}
+body.home-page > .container,
+body.home-page > footer {
+  position: relative;
+  z-index: 1;
 }
 body::before {
   content: "";
@@ -1509,24 +1527,6 @@ body.home-page .intro-header:hover .intro-header-video {
 .postlist-container,
 .sidebar-container {
   animation: rise-in 0.7s ease both;
-}
-
-.postlist-container {
-  padding: 18px 18px 10px;
-  border: 1px solid rgba(27, 209, 165, 0.1);
-  border-radius: 18px;
-}
-
-.sidebar-container {
-  padding: 24px;
-  border: 1px solid rgba(27, 209, 165, 0.1);
-  border-radius: 18px;
-  background: rgba(29, 32, 48, 0.58);
-}
-
-.sidebar-container h5,
-.sidebar-container h5 a {
-  color: #e8eaf0 !important;
 }
 .post-preview {
   position: relative;

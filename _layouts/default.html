@@ -6,6 +6,8 @@
 <!-- hack iOS CSS :active style -->
 <body class="{% if page.home-page %}home-page{% endif %}" ontouchstart="">
 
+    {% if page.home-page %}{% include panel-wallpaper.html %}{% endif %}
+
     {% include nav.html %}
     {% include search.html %}
 

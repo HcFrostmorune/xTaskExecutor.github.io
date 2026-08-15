@@ -1319,7 +1319,20 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 body.home-page {
-  background: transparent;
+  background: #161823 url("../assets/cherry-endfield.gif") center / cover fixed no-repeat;
+  color: #e8eaf0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body.home-page > .panel-wallpaper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 0;
 }
 /* Keep chrome overlays out of document flow so intro-header starts at y=0 */
 body.home-page > .navbar-custom {
@@ -1332,6 +1345,11 @@ body.home-page > .navbar-custom {
 body.home-page > .search-page {
   position: fixed;
   z-index: 1040;
+}
+body.home-page > .container,
+body.home-page > footer {
+  position: relative;
+  z-index: 1;
 }
 body::before {
   content: "";
@@ -1509,48 +1527,6 @@ body.home-page .intro-header:hover .intro-header-video {
 .postlist-container,
 .sidebar-container {
   animation: rise-in 0.7s ease both;
-}
-body.home-page .postlist-container,
-.featured-tags-panel {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  background: #161823 url("../assets/cherry-endfield.gif") center / cover no-repeat;
-}
-body.home-page .postlist-container {
-  padding: 18px 18px 10px;
-  border: 1px solid rgba(27, 209, 165, 0.1);
-  border-radius: 18px;
-}
-.featured-tags-panel {
-  margin: 0 0 18px;
-  padding: 16px 16px 14px;
-  border: 1px solid rgba(27, 209, 165, 0.1);
-  border-radius: 16px;
-}
-.panel-wallpaper {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  pointer-events: none;
-}
-body.home-page .postlist-container::after,
-.featured-tags-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(22, 24, 35, 0.28), rgba(22, 24, 35, 0.52));
-  z-index: 1;
-  pointer-events: none;
-}
-body.home-page .postlist-container > *:not(.panel-wallpaper),
-.featured-tags-panel > *:not(.panel-wallpaper) {
-  position: relative;
-  z-index: 2;
 }
 .post-preview {
   position: relative;
