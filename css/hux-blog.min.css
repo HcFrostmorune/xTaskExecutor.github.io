@@ -1422,13 +1422,15 @@ footer {
   isolation: isolate;
 }
 body.home-page .intro-header {
-  background: #161823;
+  min-height: 100dvh;
+  background: #161823 url("../assets/are-you-lost.jpg") center / cover no-repeat;
   z-index: 1;
   overflow: hidden;
   margin-top: 0;
 }
 body.home-page .intro-header::after {
-  background: none;
+  background: linear-gradient(to bottom, transparent 20%, #161823);
+  z-index: 1;
 }
 .intro-header-video {
   position: absolute;
@@ -1453,27 +1455,31 @@ body.home-page .intro-header-video {
   z-index: 0;
 }
 body.home-page .intro-header > .container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
   z-index: 2;
 }
 body.home-page .intro-header .site-heading {
   position: relative;
   z-index: 2;
-  padding: 88px 0 148px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 88px 0 72px;
 }
 @media only screen and (min-width: 768px) {
   body.home-page .intro-header > .container {
-    top: 0;
+    top: auto;
   }
   body.home-page .intro-header .site-heading {
-    padding: 96px 0 160px;
+    padding: 96px 0 80px;
   }
 }
 .intro-header:hover .intro-header-video {
   transform: scale(1.025);
+}
+body.home-page .intro-header:hover .intro-header-video {
+  transform: none;
 }
 .intro-header::after {
   content: "";

@@ -100,9 +100,15 @@
 
 {% if include.type == 'page' %}
 <header class="intro-header">
+  {% if page.home-page %}
+  <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/assets/are-you-lost.jpg" aria-hidden="true">
+    <source src="{{ site.baseurl }}/assets/are-you-lost.mp4" type="video/mp4">
+  </video>
+  {% else %}
   <video class="intro-header-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="{{ site.baseurl }}/assets/wavygrass.webm" type="video/webm">
   </video>
+  {% endif %}
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
